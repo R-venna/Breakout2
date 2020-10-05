@@ -24,4 +24,3 @@ function draw() {
   // teken een cirkel
   ellipse(50,50,80,80);
 }
-//test
