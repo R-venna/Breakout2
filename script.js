@@ -53,14 +53,8 @@ class Blok extends spelElement {
         this.hoogte = _hoogte;
     }
 
-<<<<<<< HEAD
     show () {
         rect(this.x, this.y, this.breedte, this.hoogte);
     }
 }
 
-=======
-  // teken een cirkel
-  ellipse(50,50,80,80);
-}
->>>>>>> bfb9ebd0d9a59f86370a028535168fd56c6677bd
