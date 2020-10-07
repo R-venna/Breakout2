@@ -1,4 +1,16 @@
-class Bal {
+class spelElement {
+    x;
+    y;
+
+    constructor (_x, _y) {
+        this.x = _x;
+        this.y = _y;
+    }
+}
+
+
+
+class Bal extends spelElement {
     x;
     y;
     speedX;
@@ -6,11 +18,10 @@ class Bal {
     diameter;
 
     constructor (_x, _y, _speedX, _speedY) {
-        this.x = _x;
-        this.y = _y;
+        super(_x, _y);
         this.speedX = _speedX;
         this.speedY = _speedY;
-        this.diameter = _diameter;
+        this.diameter = 80;
     }
     show () {
         noStroke();
@@ -21,13 +32,29 @@ class Bal {
         this.x = this.x + this.speedX;
         this.y = this.y + this.speedY;
 
-        /* 
-        if (x blablabla) {
+        if (this.x >= 1200 || this.x <= 80) {
             this.speedX = -1 * this.speedX;
         }
-        if (y blablabla) {
+        if (this.y >= 640 || this.y <= 80 {
             this.speedY = -1 * this.speedY;
         }
-        */
     }
 }
+
+class Blok extends spelElement {
+    x;
+    y;
+    breedte;
+    hoogte;
+
+    constructor (_x, _y, _breedte, _hoogte) {
+        super(_x, _y);
+        this.breedte = _breedte;
+        this.hoogte = _hoogte;
+    }
+
+    show () {
+        rect(this.x, this.y, this.breedte, this.hoogte);
+    }
+}
+
