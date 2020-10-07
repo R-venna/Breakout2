@@ -1,27 +1,33 @@
-/**
- * setup
- * de code in deze functie wordt één keer uitgevoerd door
- * de p5 library, zodra het spel geladen is in de browser
- */
-function setup() {
-  // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
-  createCanvas(1280, 720);
+class Bal {
+    x;
+    y;
+    speedX;
+    speedY;
+    diameter;
 
-  // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+    constructor (_x, _y, _speedX, _speedY) {
+        this.x = _x;
+        this.y = _y;
+        this.speedX = _speedX;
+        this.speedY = _speedY;
+        this.diameter = _diameter;
+    }
+    show () {
+        noStroke();
+        fill(255, 0, 0);
+        ellipse(this.x, this.y, this.diameter, this.diameter);
+    }
+    update () {
+        this.x = this.x + this.speedX;
+        this.y = this.y + this.speedY;
+
+        /* 
+        if (x blablabla) {
+            this.speedX = -1 * this.speedX;
+        }
+        if (y blablabla) {
+            this.speedY = -1 * this.speedY;
+        }
+        */
+    }
 }
-
-
-/**
- * draw
- * de code in deze functie wordt meerdere keren per seconde
- * uitgevoerd door de p5 library, nadat de setup functie klaar is
- */
-function draw() {
-  // stel vulkleur in
-  fill(100, 100, 255);
-
-  // teken een cirkel
-  ellipse(50,50,80,80);
-}
-//test
